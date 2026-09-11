@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MILKYWAY ICECREAM | Contact, Location & Feedback</title>
+    <meta name="description" content="Contact The Milkyway Icecream in Udaipur: Opening hours 10am-10pm Mon-Sat, call & WhatsApp 9828882019, Google Maps location, and feedback form.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =========================================================
+           ROOT COLOR THEME (ORIGINAL MILKYWAY BLUE)
+        ========================================================= */
+        :root {
+            --blue: #21156d;
+            --blue-dark: #120b46;
+            --blue-light: #33279a;
+            --blue-soft: #eef0ff;
+            --white: #ffffff;
+            --light: #f5f7ff;
+            --text: #182033;
+            --muted: #6c7284;
+            --border: #e2e5f2;
+            --border-hover: #b8bfe6;
+            --shadow: 0 10px 30px rgba(33, 21, 109, .08);
+            --shadow-hover: 0 16px 40px rgba(33, 21, 109, .14);
+            --radius: 18px;
+            --radius-lg: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--light);
+            color: var(--text);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button, input, textarea {
+            font-family: inherit;
+        }
+
+        /* =========================================================
+           TOP BRAND HEADER
+        ========================================================= */
+        .site-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-top {
+            padding: 22px 20px 16px;
+            text-align: center;
+            background: linear-gradient(180deg, #edf0ff 0%, var(--white) 100%);
+        }
+
+        .brand-logo-img {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid var(--blue);
+            box-shadow: 0 6px 22px rgba(33, 21, 109, .22);
+            transition: transform .3s ease;
+        }
+
+        .brand-logo-img:hover {
+            transform: scale(1.06);
+        }
+
+        .brand-title {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            line-height: 1.1;
+            letter-spacing: .5px;
+        }
+
+        .brand-title span {
+            color: var(--blue-light);
+        }
+
+        .brand-tagline {
+            color: var(--muted);
+            font-size: 11px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-top: 6px;
+            font-weight: 700;
+        }
+
+        /* NAVIGATION BAR */
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 36px;
+            padding: 12px 20px;
+            border-top: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        .site-nav a {
+            font-size: 14px;
+            font-weight: 700;
+            color: #4a4f60;
+            position: relative;
+            padding: 6px 4px;
+            transition: color .25s ease;
+        }
+
+        .site-nav a:hover,
+        .site-nav a.active {
+            color: var(--blue);
+        }
+
+        .site-nav a.active::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2.5px;
+            background: var(--blue);
+            border-radius: 2px;
+        }
+
+        /* =========================================================
+           CONTACT HERO & INTRO
+        ========================================================= */
+        .contact-intro {
+            text-align: center;
+            padding: 40px 20px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contact-intro small {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .contact-intro h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(30px, 4.5vw, 44px);
+            color: var(--blue-dark);
+            margin: 6px 0 8px;
+        }
+
+        .contact-intro p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+           MAIN CONTACT SECTION CONTAINER
+        ========================================================= */
+        .contact-main {
+            max-width: 1080px;
+            margin: auto;
+            padding: 10px 20px 70px;
+        }
+
+        /* 3 CARDS ROW (HOURS, PHONE, LOCATION) */
+        .contact-cards-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 22px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-hover);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .contact-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--blue-soft);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 16px;
+        }
+
+        .contact-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            color: var(--blue-dark);
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .card-btn-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .call-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--blue);
+            color: white;
+            padding: 11px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: background .25s ease, transform .2s ease;
+        }
+
+        .call-btn:hover {
+            background: var(--blue-light);
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #25d366;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: background .25s ease, transform .2s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1eb954;
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #ea4335;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: background .25s ease, transform .2s ease;
+            margin-top: 14px;
+        }
+
+        .map-btn:hover {
+            background: #d33828;
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           SPLIT CONTAINER: MAP & FEEDBACK FORM
+        ========================================================= */
+        .split-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+
+        /* LOCATION & MAP EMBED */
+        .map-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 26px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .map-box h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
+            color: var(--blue-dark);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .map-box h3 i {
+            color: #ea4335;
+        }
+
+        .map-box p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .map-wrapper {
+            width: 100%;
+            height: 290px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* FEEDBACK FORM */
+        .feedback-box {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+        }
+
+        .feedback-box h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
+            color: var(--blue-dark);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feedback-box h3 i {
+            color: var(--blue);
+        }
+
+        .feedback-box p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #2c334b;
+            margin-bottom: 8px;
+        }
+
+        /* Star Rating Form Card */
+        .rating-form-group {
+            background: #ffffff;
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(33, 21, 109, .04);
+            transition: border-color .2s ease;
+        }
+
+        .rating-form-group:focus-within {
+            border-color: var(--blue);
+        }
+
+        .rating-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .rating-main-label {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            margin: 0 !important;
+        }
+
+        .rating-feedback-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #fff8e7 0%, #fff1c5 100%);
+            color: #945700;
+            border: 1px solid #f6d17b;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .2px;
+            box-shadow: 0 2px 6px rgba(245, 166, 35, .15);
+            transition: all .25s ease;
+        }
+
+        .rating-feedback-badge #ratingStarsIcon {
+            color: #f5a623;
+            letter-spacing: 1.5px;
+            font-size: 13px;
+        }
+
+        .interactive-star-picker {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            padding: 4px 0 8px;
+            touch-action: manipulation;
+        }
+
+        .star-btn {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            background: var(--light);
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 4px;
+            cursor: pointer;
+            transition: all .2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 60px;
+        }
+
+        .star-btn i {
+            font-size: 26px;
+            color: #c9ccd8;
+            transition: color .2s ease, transform .2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .star-btn .star-subtext {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--muted);
+            transition: color .2s ease;
+        }
+
+        /* Active / Selected States */
+        .star-btn.active {
+            background: #fffdf5;
+            border-color: #fbd374;
+        }
+
+        .star-btn.active i {
+            color: #f5a623;
+            transform: scale(1.12);
+            filter: drop-shadow(0 2px 4px rgba(245, 166, 35, .35));
+        }
+
+        .star-btn.active .star-subtext {
+            color: #945700;
+        }
+
+        /* Hover Preview States on Desktop */
+        @media (hover: hover) {
+            .star-btn:hover {
+                background: #fffbf0;
+                border-color: #f5a623;
+                transform: translateY(-3px);
+            }
+            .star-btn:hover i {
+                color: #f5a623;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Click/Tap Bounce Animation */
+        .star-btn.bounce {
+            animation: starBounce 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes starBounce {
+            0% { transform: scale(1); }
+            45% { transform: scale(1.25); }
+            100% { transform: scale(1); }
+        }
+
+        .star-helper-text {
+            font-size: 12px;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .star-helper-text i {
+            color: var(--blue);
+            font-size: 13px;
+        }
+
+        .form-control {
+            width: 100%;
+            border: 1.5px solid var(--border);
+            background: var(--light);
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: var(--text);
+            outline: none;
+            transition: border-color .25s ease, background .25s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--blue);
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(33, 21, 109, .10);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 105px;
+        }
+
+        .feedback-submit-btn {
+            width: 100%;
+            background: #25d366;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: background .25s ease, transform .2s ease;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, .25);
+        }
+
+        .feedback-submit-btn:hover {
+            background: #1eb954;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(37, 211, 102, .35);
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+        footer {
+            background: var(--blue-dark);
+            color: var(--white);
+            padding: 40px 20px 25px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        footer h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+            margin-bottom: 6px;
+            letter-spacing: .5px;
+        }
+
+        footer p {
+            color: #b5b9dc;
+            font-size: 13.5px;
+            margin-bottom: 14px;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .12);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: background .25s ease, transform .2s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--white);
+            color: var(--blue);
+            transform: translateY(-2px);
+        }
+
+        .copyright-text {
+            color: #8c90b8;
+            font-size: 12px;
+            border-top: 1px solid rgba(255, 255, 255, .10);
+            padding-top: 16px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* =========================================================
+           RESPONSIVE ENHANCEMENTS
+        ========================================================= */
+        @media (min-width: 768px) {
+            .split-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =========================================================
+         TOP BRAND HEADER
+    ========================================================= -->
+    <header class="site-header" id="home">
+        <div class="header-top">
+            <img src="images/logo/logo.png" alt="The Milkyway Icecream Logo" class="brand-logo-img" onerror="this.src='images/logo/logo.jpeg'">
+            <h1 class="brand-title">THE <span>MILKYWAY</span></h1>
+            <div class="brand-tagline">Ice Cream · Waffles · Shakes · Coffee</div>
+        </div>
+
+        <!-- NAVIGATION BAR -->
+        <nav class="site-nav">
+            <a href="index.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- =========================================================
+         CONTACT INTRO
+    ========================================================= -->
+    <section class="contact-intro">
+        <small>GET IN TOUCH</small>
+        <h1>Visit & Contact Us</h1>
+        <p>Whether you have questions, feedback, catering requests, or just want to treat yourself to our handcrafted treats — we're delighted to welcome you!</p>
+    </section>
+
+    <!-- =========================================================
+         CONTACT MAIN CONTENT
+    ========================================================= -->
+    <main class="contact-main">
+        <!-- 3 CARDS ROW -->
+        <div class="contact-cards-row">
+            <!-- HOURS CARD -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <h3>Opening Hours</h3>
+                <p><strong>Monday – Saturday</strong><br>10:00 AM – 10:00 PM</p>
+                <p style="margin-top: 6px; font-size: 13px; color: var(--blue); font-weight: 700;">Open for Dine-in & Takeaway</p>
+            </div>
+
+            <!-- PHONE / WHATSAPP CARD -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <h3>Call & WhatsApp</h3>
+                <p>Orders & quick inquiries:</p>
+                <p style="font-size: 18px; font-weight: 800; color: var(--blue-dark); margin: 6px 0;">+91 98288 82019</p>
+                <div class="card-btn-stack">
+                    <a href="tel:+919828882019" class="call-btn">
+                        <i class="fa-solid fa-phone"></i> Call 9828882019
+                    </a>
+                    <a href="https://wa.me/919828882019?text=Hello%20The%20Milkyway,%20I%20would%20like%20to%20know%20more%20about%20your%20menu." target="_blank" class="whatsapp-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- ADDRESS CARD -->
+            <div class="contact-card">
+                <div class="contact-icon" style="color: #ea4335;">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3>Our Location</h3>
+                <p>The Milkyway Icecream, 100 Feet Rd, Mali Colony, Gayariawas, Central Area, Udaipur, Rajasthan 313001</p>
+                <a href="https://maps.app.goo.gl/s6mCvS23oAHvjjg7A?g_st=aw" target="_blank" class="map-btn">
+                    <i class="fa-solid fa-diamond-turn-right"></i> Open Google Maps
+                </a>
+            </div>
+        </div>
+
+        <!-- TWO-COLUMN SPLIT: MAP & FEEDBACK -->
+        <div class="split-container">
+            <!-- GOOGLE MAP PREVIEW -->
+            <div class="map-box">
+                <h3><i class="fa-solid fa-map-location-dot"></i> Find Us on Google Maps</h3>
+                <p>
+                    <strong>The Milkyway Icecream</strong><br>
+                    100 Feet Rd, Mali Colony, Gayariawas, Central Area, Udaipur, Rajasthan 313001
+                </p>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=The+Milkyway+icecream+100+Feet+Rd+Mali+Colony+Gayariawas+Udaipur+Rajasthan+313001&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        title="The Milkyway Location Map"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <a href="https://maps.app.goo.gl/s6mCvS23oAHvjjg7A?g_st=aw" target="_blank" class="map-btn" style="width: 100%; margin-top: auto;">
+                    <i class="fa-solid fa-location-arrow"></i> Get Directions in Google Maps
+                </a>
+            </div>
+
+            <!-- FEEDBACK FORM VIA WHATSAPP -->
+            <div class="feedback-box">
+                <h3><i class="fa-solid fa-comment-dots"></i> Send Us Your Feedback</h3>
+                <p>Your feedback helps us serve you better! Fill out the details below and it will send directly to our WhatsApp.</p>
+
+                <form id="feedbackForm" onsubmit="handleFeedbackSubmit(event)">
+                    <!-- INTERACTIVE STAR RATING PICKER -->
+                    <div class="form-group rating-form-group">
+                        <div class="rating-header-row">
+                            <label for="ratingValue" class="rating-main-label">
+                                <i class="fa-solid fa-award" style="color: #f5a623;"></i> Select Your Rating:
+                            </label>
+                            <span class="rating-feedback-badge" id="ratingBadge">
+                                <span id="ratingStarsIcon">★★★★★</span>
+                                <span id="ratingTextDesc">5 Stars - Excellent!</span>
+                            </span>
+                        </div>
+
+                        <!-- TOUCH & CLICK FRIENDLY STAR PICKER (1 TO 5) -->
+                        <div class="interactive-star-picker" id="starPicker" role="radiogroup" aria-label="Rate your experience from 1 to 5 stars">
+                            <button type="button" class="star-btn active" data-rating="1" aria-label="1 star - Poor" title="1 Star - Poor">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="star-subtext">1 ★</span>
+                            </button>
+                            <button type="button" class="star-btn active" data-rating="2" aria-label="2 stars - Fair" title="2 Stars - Fair">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="star-subtext">2 ★</span>
+                            </button>
+                            <button type="button" class="star-btn active" data-rating="3" aria-label="3 stars - Good" title="3 Stars - Good">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="star-subtext">3 ★</span>
+                            </button>
+                            <button type="button" class="star-btn active" data-rating="4" aria-label="4 stars - Very Good" title="4 Stars - Very Good">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="star-subtext">4 ★</span>
+                            </button>
+                            <button type="button" class="star-btn active" data-rating="5" aria-label="5 stars - Excellent" title="5 Stars - Excellent">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="star-subtext">5 ★</span>
+                            </button>
+                        </div>
+                        
+                        <div class="star-helper-text">
+                            <i class="fa-regular fa-hand-pointer"></i> Tap on any star to select your rating (1 to 5)
+                        </div>
+
+                        <input type="hidden" id="ratingValue" name="rating" value="5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fbEmail">Your Email Address *</label>
+                        <input type="email" id="fbEmail" class="form-control" placeholder="e.g. yourname@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fbDesc">Your Experience / Description *</label>
+                        <textarea id="fbDesc" class="form-control" placeholder="Share your experience, favorite dish, or suggestions..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="feedback-submit-btn">
+                        <i class="fa-brands fa-whatsapp"></i> Send Feedback via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+    <footer>
+        <h3>THE MILKYWAY ICECREAM</h3>
+        <p>A Little Taste of Happiness · Udaipur</p>
+
+        <div class="footer-social">
+            <a href="index.html" aria-label="Menu" title="Menu"><i class="fa-solid fa-utensils"></i></a>
+            <a href="gallery.html" aria-label="Gallery" title="Gallery"><i class="fa-solid fa-images"></i></a>
+            <a href="contact.html" aria-label="Contact" title="Contact"><i class="fa-solid fa-address-book"></i></a>
+            <a href="https://maps.app.goo.gl/s6mCvS23oAHvjjg7A?g_st=aw" target="_blank" aria-label="Location" title="Google Maps"><i class="fa-solid fa-location-dot"></i></a>
+            <a href="https://wa.me/919828882019" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+919828882019" aria-label="Call" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+        </div>
+
+        <div class="copyright-text">
+            © 2026 THE MILKYWAY ICECREAM. All Rights Reserved.<br>
+            100 Feet Rd, Mali Colony, Gayariawas, Central Area, Udaipur, Rajasthan 313001
+        </div>
+    </footer>
+
+    <!-- =========================================================
+         INTERACTIVE STAR RATING & FEEDBACK SCRIPT
+    ========================================================= -->
+    <script>
+        const starButtons = document.querySelectorAll(".interactive-star-picker .star-btn");
+        const ratingInput = document.getElementById("ratingValue");
+        const ratingBadge = document.getElementById("ratingBadge");
+        const ratingStarsIcon = document.getElementById("ratingStarsIcon");
+        const ratingTextDesc = document.getElementById("ratingTextDesc");
+
+        // Rating descriptors and badges
+        const ratingMeta = {
+            1: { text: "1 Star - Poor 😞", stars: "★☆☆☆☆", color: "#b91c1c", bg: "#fef2f2", border: "#fca5a5" },
+            2: { text: "2 Stars - Fair 😐", stars: "★★☆☆☆", color: "#c2410c", bg: "#fff7ed", border: "#fdba74" },
+            3: { text: "3 Stars - Good 🙂", stars: "★★★☆☆", color: "#b45309", bg: "#fefce8", border: "#fde047" },
+            4: { text: "4 Stars - Very Good 😊", stars: "★★★★☆", color: "#1d4ed8", bg: "#eff6ff", border: "#93c5fd" },
+            5: { text: "5 Stars - Excellent! 🌟", stars: "★★★★★", color: "#945700", bg: "#fff8e7", border: "#f6d17b" }
+        };
+
+        let currentRating = 5;
+
+        // Visual update for buttons and description badge
+        function renderStars(highlightVal) {
+            starButtons.forEach(btn => {
+                const val = parseInt(btn.getAttribute("data-rating"), 10);
+                if (val <= highlightVal) {
+                    btn.classList.add("active");
+                } else {
+                    btn.classList.remove("active");
+                }
+            });
+
+            const meta = ratingMeta[highlightVal] || ratingMeta[5];
+            if (ratingStarsIcon) ratingStarsIcon.textContent = meta.stars;
+            if (ratingTextDesc) ratingTextDesc.textContent = meta.text;
+            if (ratingBadge) {
+                ratingBadge.style.color = meta.color;
+                ratingBadge.style.background = meta.bg;
+                ratingBadge.style.borderColor = meta.border;
+            }
+        }
+
+        // Set confirmed rating value
+        function setRating(val, triggerBounce = true) {
+            currentRating = Math.max(1, Math.min(5, parseInt(val, 10) || 5));
+            ratingInput.value = currentRating;
+            renderStars(currentRating);
+
+            if (triggerBounce) {
+                const targetBtn = document.querySelector(`.star-btn[data-rating="${currentRating}"]`);
+                if (targetBtn) {
+                    targetBtn.classList.remove("bounce");
+                    void targetBtn.offsetWidth; // force DOM reflow
+                    targetBtn.classList.add("bounce");
+                }
+            }
+        }
+
+        // Event listeners for each star button (Click / Tap + Desktop Hover)
+        starButtons.forEach(btn => {
+            const val = parseInt(btn.getAttribute("data-rating"), 10);
+
+            // Click or mobile tap
+            btn.addEventListener("click", function (e) {
+                e.preventDefault();
+                setRating(val, true);
+            });
+
+            // Touchstart for instantaneous response on mobile devices
+            btn.addEventListener("touchstart", function (e) {
+                // allow native click or trigger setRating directly
+                setRating(val, true);
+            }, { passive: true });
+
+            // Hover preview on desktop
+            btn.addEventListener("mouseenter", function () {
+                renderStars(val);
+            });
+        });
+
+        // Restore active rating when mouse leaves the star picker container
+        const starPickerContainer = document.getElementById("starPicker");
+        if (starPickerContainer) {
+            starPickerContainer.addEventListener("mouseleave", function () {
+                renderStars(currentRating);
+            });
+        }
+
+        // Initialize with default 5 stars
+        setRating(5, false);
+
+        // Submit form directly to WhatsApp
+        function handleFeedbackSubmit(e) {
+            e.preventDefault();
+
+            const rating = parseInt(ratingInput.value, 10) || 5;
+            const email = document.getElementById("fbEmail").value.trim();
+            const desc = document.getElementById("fbDesc").value.trim();
+
+            if (!email || !desc) {
+                alert("Please fill in your email and feedback description.");
+                return;
+            }
+
+            const meta = ratingMeta[rating] || { text: rating + " Stars", stars: "⭐".repeat(rating) };
+            const starEmojis = "⭐".repeat(rating);
+
+            let message = "🌟 *CUSTOMER FEEDBACK - THE MILKYWAY ICECREAM* 🌟\n\n";
+            message += "⭐ *Rating:* " + starEmojis + " (" + meta.text + ")\n";
+            message += "📧 *Email:* " + email + "\n";
+            message += "💬 *Feedback:* " + desc + "\n\n";
+            message += "— Sent via The Milkyway Website Contact Page";
+
+            const phone = "919828882019";
+            const whatsappUrl = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+            window.open(whatsappUrl, "_blank");
+
+            // Reset form gracefully
+            document.getElementById("feedbackForm").reset();
+            setRating(5, false);
+        }
+    </script>
+</body>
+</html>

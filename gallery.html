@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MILKYWAY ICECREAM | Ambiance & Interior Gallery</title>
+    <meta name="description" content="Explore the cozy ambiance, stylish interior, comfortable seating, and aesthetic lighting of The Milkyway Icecream & Cafe in Udaipur.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =========================================================
+           ROOT COLOR THEME (PRESERVED ORIGINAL MILKYWAY BLUE)
+        ========================================================= */
+        :root {
+            --blue: #21156d;
+            --blue-dark: #120b46;
+            --blue-light: #33279a;
+            --blue-soft: #eef0ff;
+            --white: #ffffff;
+            --light: #f5f7ff;
+            --text: #182033;
+            --muted: #6c7284;
+            --border: #e2e5f2;
+            --shadow: 0 10px 30px rgba(33, 21, 109, .08);
+            --shadow-hover: 0 16px 40px rgba(33, 21, 109, .15);
+            --radius: 18px;
+            --radius-lg: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--light);
+            color: var(--text);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button, input {
+            font-family: inherit;
+        }
+
+        /* =========================================================
+           TOP BRAND HEADER
+        ========================================================= */
+        .site-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-top {
+            padding: 20px 18px 14px;
+            text-align: center;
+            background: linear-gradient(180deg, #edf0ff 0%, var(--white) 100%);
+        }
+
+        .brand-logo-img {
+            width: 74px;
+            height: 74px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 8px;
+            border: 3px solid var(--blue);
+            box-shadow: 0 6px 20px rgba(33, 21, 109, .20);
+            transition: transform .3s ease;
+        }
+
+        .brand-logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .brand-title {
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            line-height: 1.1;
+            letter-spacing: .5px;
+        }
+
+        .brand-title span {
+            color: var(--blue-light);
+        }
+
+        .brand-tagline {
+            color: var(--muted);
+            font-size: 11px;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            font-weight: 700;
+        }
+
+        /* NAVIGATION BAR */
+        .site-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 36px;
+            padding: 12px 20px;
+            border-top: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        .site-nav a {
+            font-size: 14px;
+            font-weight: 700;
+            color: #4a4f60;
+            position: relative;
+            padding: 6px 4px;
+            transition: color .25s ease;
+        }
+
+        .site-nav a:hover,
+        .site-nav a.active {
+            color: var(--blue);
+        }
+
+        .site-nav a.active::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2.5px;
+            background: var(--blue);
+            border-radius: 2px;
+        }
+
+        /* =========================================================
+           GALLERY INTRO
+        ========================================================= */
+        .gallery-intro {
+            text-align: center;
+            padding: 34px 18px 18px;
+            max-width: 780px;
+            margin: auto;
+        }
+
+        .gallery-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--blue-soft);
+            color: var(--blue);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            border: 1px solid rgba(33, 21, 109, .12);
+        }
+
+        .gallery-intro h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(28px, 4vw, 42px);
+            color: var(--blue-dark);
+            margin: 4px 0 8px;
+            line-height: 1.15;
+        }
+
+        .gallery-intro p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.55;
+            max-width: 540px;
+            margin: auto;
+        }
+
+        .tap-hint {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 10px;
+            background: rgba(33, 21, 109, .06);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* =========================================================
+           DYNAMIC ATTRACTIVE PHONE-FRIENDLY GALLERY GRID
+        ========================================================= */
+        .gallery-main {
+            max-width: 1120px;
+            margin: auto;
+            padding: 10px 18px 65px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-card {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 290px;
+            box-shadow: var(--shadow);
+            background: var(--white);
+            cursor: pointer;
+            transition: transform .35s ease, box-shadow .35s ease;
+            border: 1px solid var(--border);
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--blue-light);
+        }
+
+        .gallery-card:active {
+            transform: scale(.98);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .6s cubic-bezier(.16, 1, .3, 1);
+            display: block;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.07);
+        }
+
+        .gallery-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(18, 11, 70, .92) 0%, rgba(18, 11, 70, .3) 60%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: var(--white);
+            pointer-events: none;
+        }
+
+        .gallery-card-overlay .tag {
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #d8dcff;
+            margin-bottom: 4px;
+        }
+
+        .gallery-card-overlay .title {
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.25;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, .5);
+        }
+
+        .zoom-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .90);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+            transition: transform .25s ease, background .25s ease;
+        }
+
+        .gallery-card:hover .zoom-badge {
+            transform: scale(1.1);
+            background: var(--white);
+        }
+
+        /* =========================================================
+           MOBILE SPECIFIC STYLES (2-COLUMN AESTHETIC GRID)
+        ========================================================= */
+        @media (max-width: 650px) {
+            .gallery-intro {
+                padding: 24px 14px 14px;
+            }
+
+            .gallery-main {
+                padding: 6px 12px 55px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .gallery-card {
+                height: 195px;
+                border-radius: 14px;
+            }
+
+            /* Editorial Hero Card: Every 5th card spans full 2 columns! */
+            .gallery-card.featured-card {
+                grid-column: span 2;
+                height: 230px;
+            }
+
+            .gallery-card-overlay {
+                padding: 12px 10px;
+            }
+
+            .gallery-card-overlay .tag {
+                font-size: 8.5px;
+                letter-spacing: 1px;
+                margin-bottom: 2px;
+            }
+
+            .gallery-card-overlay .title {
+                font-size: 13.5px;
+                line-height: 1.2;
+            }
+
+            .zoom-badge {
+                width: 28px;
+                height: 28px;
+                font-size: 10px;
+                top: 8px;
+                right: 8px;
+            }
+        }
+
+        /* VERY SMALL SCREENS (iPhone SE etc.) */
+        @media (max-width: 350px) {
+            .gallery-card {
+                height: 175px;
+            }
+            .gallery-card-overlay .title {
+                font-size: 12px;
+            }
+        }
+
+        /* =========================================================
+           LIGHTBOX MODAL (WITH NEXT/PREV CONTROLS)
+        ========================================================= */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(12, 8, 45, .94);
+            backdrop-filter: blur(14px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s ease;
+        }
+
+        .lightbox-modal.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            user-select: none;
+        }
+
+        .lightbox-img-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 72vh;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .7);
+            object-fit: contain;
+            border: 2px solid rgba(255, 255, 255, .15);
+            transition: opacity .25s ease, transform .25s ease;
+        }
+
+        .lightbox-bottom {
+            margin-top: 14px;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .lightbox-caption {
+            font-family: "Playfair Display", serif;
+            font-size: 18px;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, .7);
+            margin-bottom: 4px;
+        }
+
+        .lightbox-counter {
+            font-size: 12px;
+            color: #b3b7e0;
+            font-weight: 600;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -46px;
+            right: 0;
+            background: rgba(255, 255, 255, .18);
+            border: 1px solid rgba(255, 255, 255, .3);
+            color: white;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background .2s ease;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, .35);
+        }
+
+        /* NEXT / PREV ARROW BUTTONS */
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, .18);
+            border: 1px solid rgba(255, 255, 255, .3);
+            color: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background .2s ease, transform .2s ease;
+            z-index: 10;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, .35);
+            transform: translateY(-50%) scale(1.08);
+        }
+
+        .lightbox-prev {
+            left: -12px;
+        }
+
+        .lightbox-next {
+            right: -12px;
+        }
+
+        @media (max-width: 650px) {
+            .lightbox-prev {
+                left: 6px;
+            }
+            .lightbox-next {
+                right: 6px;
+            }
+            .lightbox-nav {
+                width: 36px;
+                height: 36px;
+                font-size: 15px;
+                background: rgba(18, 11, 70, .7);
+            }
+            .lightbox-close {
+                top: -42px;
+                right: 4px;
+            }
+            .lightbox-caption {
+                font-size: 15px;
+            }
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+        footer {
+            background: var(--blue-dark);
+            color: var(--white);
+            padding: 38px 20px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        footer h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 23px;
+            margin-bottom: 6px;
+            letter-spacing: .5px;
+        }
+
+        footer p {
+            color: #b5b9dc;
+            font-size: 13.5px;
+            margin-bottom: 14px;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .12);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            transition: background .25s ease, transform .2s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--white);
+            color: var(--blue);
+            transform: translateY(-2px);
+        }
+
+        .copyright-text {
+            color: #8c90b8;
+            font-size: 12px;
+            border-top: 1px solid rgba(255, 255, 255, .10);
+            padding-top: 16px;
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =========================================================
+         TOP BRAND HEADER
+    ========================================================= -->
+    <header class="site-header" id="home">
+        <div class="header-top">
+            <img src="images/logo/logo.png" alt="The Milkyway Icecream Logo" class="brand-logo-img" onerror="this.src='images/logo/logo.jpeg'">
+            <h1 class="brand-title">THE <span>MILKYWAY</span></h1>
+            <div class="brand-tagline">Ice Cream · Waffles · Shakes · Coffee</div>
+        </div>
+
+        <!-- NAVIGATION BAR -->
+        <nav class="site-nav">
+            <a href="index.html">Menu</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- =========================================================
+         GALLERY INTRO
+    ========================================================= -->
+    <section class="gallery-intro">
+        <div class="gallery-badge"><i class="fa-solid fa-camera"></i> Ambiance & Interior</div>
+        <h1>Our Café Gallery</h1>
+        <p>Step into The Milkyway. Designed with warm lighting, cozy wooden booths, and comfortable seating for sweet memories with family & friends in Udaipur.</p>
+        <div class="tap-hint"><i class="fa-regular fa-hand-pointer"></i> Tap any photo to expand full screen</div>
+    </section>
+
+    <!-- =========================================================
+         GALLERY MAIN GRID (12 AMBIANCE & INTERIOR PHOTOS)
+         TIP: Easily replace the image URL in the <img> src or openLightbox() 
+         with your photo (e.g. "images/gallery/interior-1.jpg")
+    ========================================================= -->
+    <main class="gallery-main">
+        <div class="gallery-grid" id="galleryGrid">
+
+            <!-- PHOTO 1 (FEATURED) -->
+            <div class="gallery-card featured-card" onclick="openLightbox(0)">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=85" alt="Cozy Seating Corner & Ambient Lighting" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Ambiance</span>
+                    <span class="title">Cozy Seating Corner & Warm Lighting</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 2 -->
+            <div class="gallery-card" onclick="openLightbox(1)">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85" alt="Artisan Coffee Bar & Modern Counter" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Coffee Counter</span>
+                    <span class="title">Artisan Bar & Modern Counter</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 3 -->
+            <div class="gallery-card" onclick="openLightbox(2)">
+                <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1000&q=85" alt="Sunlit Window-Side Seating & Greenery" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Interior</span>
+                    <span class="title">Sunlit Window Seating</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 4 -->
+            <div class="gallery-card" onclick="openLightbox(3)">
+                <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1000&q=85" alt="Relaxed Café Seating with Warm Wooden Accents" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Seating</span>
+                    <span class="title">Comfortable Wooden Booths</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 5 (FEATURED) -->
+            <div class="gallery-card featured-card" onclick="openLightbox(4)">
+                <img src="https://images.unsplash.com/photo-1445116572660-238413b888b5?auto=format&fit=crop&w=1200&q=85" alt="Evening Mood & Hanging Pendant Lights" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Evening Mood</span>
+                    <span class="title">Ambient Pendant Lighting & Cozy Glow</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 6 -->
+            <div class="gallery-card" onclick="openLightbox(5)">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85" alt="Welcoming Dining Space for Friends & Families" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Dining</span>
+                    <span class="title">Welcoming Group Dining Space</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 7 -->
+            <div class="gallery-card" onclick="openLightbox(6)">
+                <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&w=1000&q=85" alt="Chic Minimalist Parlour Interior" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Interior</span>
+                    <span class="title">Chic Minimalist Parlour</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 8 -->
+            <div class="gallery-card" onclick="openLightbox(7)">
+                <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?auto=format&fit=crop&w=1000&q=85" alt="Cozy Warm Wooden Tables & Plants" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Aesthetics</span>
+                    <span class="title">Warm Wooden Tables & Greenery</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 9 (FEATURED) -->
+            <div class="gallery-card featured-card" onclick="openLightbox(8)">
+                <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=1200&q=85" alt="Fresh Ordering Counter & Showcase Display" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Ordering Area</span>
+                    <span class="title">Fresh Counter & Glass Display Case</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 10 -->
+            <div class="gallery-card" onclick="openLightbox(9)">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1000&q=85" alt="Quiet Corner Table with a Street View" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Corner Table</span>
+                    <span class="title">Quiet Street View Seating</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 11 -->
+            <div class="gallery-card" onclick="openLightbox(10)">
+                <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1000&q=85" alt="Afternoon Warmth & Café Table Setup" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Ambiance</span>
+                    <span class="title">Warm Afternoon Table Setup</span>
+                </div>
+            </div>
+
+            <!-- PHOTO 12 -->
+            <div class="gallery-card" onclick="openLightbox(11)">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1000&q=85" alt="Vibrant Social Gathering Space" loading="lazy">
+                <div class="zoom-badge"><i class="fa-solid fa-expand"></i></div>
+                <div class="gallery-card-overlay">
+                    <span class="tag">Hangout</span>
+                    <span class="title">Vibrant Social Gathering Space</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- =========================================================
+         LIGHTBOX MODAL (WITH NEXT/PREV CONTROLS)
+    ========================================================= -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="forceCloseLightbox()" aria-label="Close image"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="lightbox-img-wrap">
+                <button class="lightbox-nav lightbox-prev" onclick="changeSlide(-1); event.stopPropagation();" aria-label="Previous photo">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <img src="" alt="Enlarged view" class="lightbox-img" id="lightboxImg">
+                <button class="lightbox-nav lightbox-next" onclick="changeSlide(1); event.stopPropagation();" aria-label="Next photo">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="lightbox-bottom">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+                <div class="lightbox-counter" id="lightboxCounter">1 / 12</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+    <footer>
+        <h3>THE MILKYWAY ICECREAM</h3>
+        <p>A Little Taste of Happiness · Udaipur</p>
+
+        <div class="footer-social">
+            <a href="index.html" aria-label="Menu" title="Menu"><i class="fa-solid fa-utensils"></i></a>
+            <a href="gallery.html" aria-label="Gallery" title="Gallery"><i class="fa-solid fa-images"></i></a>
+            <a href="contact.html" aria-label="Contact" title="Contact"><i class="fa-solid fa-address-book"></i></a>
+            <a href="https://maps.app.goo.gl/s6mCvS23oAHvjjg7A?g_st=aw" target="_blank" aria-label="Location" title="Google Maps"><i class="fa-solid fa-location-dot"></i></a>
+            <a href="https://wa.me/919828882019" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+919828882019" aria-label="Call" title="Call Us"><i class="fa-solid fa-phone"></i></a>
+        </div>
+
+        <div class="copyright-text">
+            © 2026 THE MILKYWAY ICECREAM. All Rights Reserved.<br>
+            100 Feet Rd, Mali Colony, Gayariawas, Central Area, Udaipur, Rajasthan 313001
+        </div>
+    </footer>
+
+    <!-- =========================================================
+         PHONE-FRIENDLY LIGHTBOX JAVASCRIPT WITH TOUCH SWIPE & ARROWS
+    ========================================================= -->
+    <script>
+        // Gallery items data
+        const galleryItems = [
+            { src: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=85', title: 'Cozy Seating Corner & Warm Lighting' },
+            { src: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=85', title: 'Artisan Bar & Modern Counter' },
+            { src: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1600&q=85', title: 'Sunlit Window Seating' },
+            { src: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1600&q=85', title: 'Comfortable Wooden Booths' },
+            { src: 'https://images.unsplash.com/photo-1445116572660-238413b888b5?auto=format&fit=crop&w=1600&q=85', title: 'Ambient Pendant Lighting & Cozy Glow' },
+            { src: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=85', title: 'Welcoming Group Dining Space' },
+            { src: 'https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?auto=format&fit=crop&w=1600&q=85', title: 'Chic Minimalist Parlour' },
+            { src: 'https://images.unsplash.com/photo-1559305616-3f99cd43e353?auto=format&fit=crop&w=1600&q=85', title: 'Warm Wooden Tables & Greenery' },
+            { src: 'https://images.unsplash.com/photo-1525610553991-2bede1a236e2?auto=format&fit=crop&w=1600&q=85', title: 'Fresh Counter & Glass Display Case' },
+            { src: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1600&q=85', title: 'Quiet Street View Seating' },
+            { src: 'https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1600&q=85', title: 'Warm Afternoon Table Setup' },
+            { src: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1600&q=85', title: 'Vibrant Social Gathering Space' }
+        ];
+
+        let currentIndex = 0;
+        const modal = document.getElementById("lightboxModal");
+        const modalImg = document.getElementById("lightboxImg");
+        const modalCaption = document.getElementById("lightboxCaption");
+        const modalCounter = document.getElementById("lightboxCounter");
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateSlide();
+            modal.classList.add("show");
+            document.body.style.overflow = "hidden";
+        }
+
+        function updateSlide() {
+            const item = galleryItems[currentIndex];
+            modalImg.style.opacity = "0";
+            modalImg.style.transform = "scale(0.96)";
+            
+            setTimeout(() => {
+                modalImg.src = item.src;
+                modalCaption.textContent = item.title;
+                modalCounter.textContent = (currentIndex + 1) + " / " + galleryItems.length;
+                modalImg.style.opacity = "1";
+                modalImg.style.transform = "scale(1)";
+            }, 120);
+        }
+
+        function changeSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = galleryItems.length - 1;
+            } else if (currentIndex >= galleryItems.length) {
+                currentIndex = 0;
+            }
+            updateSlide();
+        }
+
+        function forceCloseLightbox() {
+            modal.classList.remove("show");
+            document.body.style.overflow = "";
+        }
+
+        function closeLightbox(e) {
+            if (e.target === modal || e.target.classList.contains("lightbox-content")) {
+                forceCloseLightbox();
+            }
+        }
+
+        // Keyboard Navigation (Esc, Left arrow, Right arrow)
+        document.addEventListener("keydown", (e) => {
+            if (!modal.classList.contains("show")) return;
+            if (e.key === "Escape") forceCloseLightbox();
+            if (e.key === "ArrowLeft") changeSlide(-1);
+            if (e.key === "ArrowRight") changeSlide(1);
+        });
+
+        // Touch Swipe Navigation for Mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        modal.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        modal.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeDistance = touchEndX - touchStartX;
+            if (Math.abs(swipeDistance) > 45) {
+                if (swipeDistance > 0) {
+                    changeSlide(-1); // Swiped right -> previous
+                } else {
+                    changeSlide(1);  // Swiped left -> next
+                }
+            }
+        }
+    </script>
+</body>
+</html>
